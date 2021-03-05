@@ -14,6 +14,12 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextfield: UITextField!
     
+    var messages: [Message] = [
+        Message(sender: "a@a.com.br", body: "Hey!"),
+        Message(sender: "b@b.com.br", body: "Hennloow!!"),
+        Message(sender: "a@a.com.br", body: "What's up!?")
+    ]
+    
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         let firebaseAuth = Auth.auth()
         do {
